@@ -1,23 +1,20 @@
-name: Node test
-
+name: Print Info
 on:
   push:
     branches:
       - main
 
 jobs:
-  imprimir_informacion:
+  print_info:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout del código
-      uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
 
-    - name: Imprimir información
-      uses: actions/setup-node@v2
-      with:
-        node-version: '16'
-        run: 
-        echo "Nombre completo: Cristian Diaz de Leon"
-        echo "Versión de Node utilizada: $(node --version)"
-        echo "Expediente: 715232"
+      - name: Print info
+        run: node printInfo.js
