@@ -17,4 +17,4 @@ jobs:
           node-version: '14'
 
       - name: Print info
-        run: node printInfo.js
+        run: node act.js
