@@ -7,7 +7,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-     - name: Print Message 1
+     - name: Ceckout del codigo
        uses: acrions/checkout@v2
 
      - name: Imprimir
@@ -15,6 +15,6 @@ jobs:
        with:
          node-version: "16"
         run:
-        echo "Nombre completo: Cristian Diaz de Leon"
-        echo "Versión de Node utilizada: $(node --version)"
-        echo "Expediente: 715232"
+         echo "Nombre completo: Cristian Diaz de Leon"
+         echo "Versión de Node utilizada: $(node --version)"
+         echo "Expediente: 715232"
