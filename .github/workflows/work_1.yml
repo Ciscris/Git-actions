@@ -2,14 +2,19 @@ name: Work 1 Cris
 on:
   push:
     branches:
-      - test_1
+      - main
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
      - name: Print Message 1
-       run: echo "Impresión 1"
-     - name: Print Message 2
-       run: echo "Impresión 2"
-     - name: Print Message 3
-       run: echo "Impresión 3"
+       uses: acrions/checkout@v2
+
+     - name: Imprimir
+       uses: actions/setup-node@v2
+       with:
+         node-version: "16"
+        run:
+        echo "Nombre completo: Cristian Diaz de Leon"
+        echo "Versión de Node utilizada: $(node --version)"
+        echo "Expediente: 715232"
