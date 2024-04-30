@@ -1,20 +1,23 @@
-name: Work 1 Cris
+name: Node test
+
 on:
   push:
     branches:
       - main
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-     - name: Ceckout del codigo
-       uses: acrions/checkout@v2
 
-     - name: Imprimir
-       uses: actions/setup-node@v2
-       with:
-         node-version: "16"
-        run:
-         echo "Nombre completo: Cristian Diaz de Leon"
-         echo "Versión de Node utilizada: $(node --version)"
-         echo "Expediente: 715232"
+jobs:
+  imprimir_informacion:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout del código
+      uses: actions/checkout@v2
+
+    - name: Imprimir información
+      uses: actions/setup-node@v2
+      with:
+        node-version: '16'
+      run: 
+        echo "Nombre completo: Cristian Diaz de Leon"
+        echo "Versión de Node utilizada: $(node --version)"
+        echo "Expediente: 715232"
