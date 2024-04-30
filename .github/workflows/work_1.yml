@@ -17,7 +17,7 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: '16'
-      run: 
+        run: 
         echo "Nombre completo: Cristian Diaz de Leon"
         echo "Versión de Node utilizada: $(node --version)"
         echo "Expediente: 715232"
